@@ -1,0 +1,771 @@
+{
+    "date": "Sun Jul 16 17:22:03 2023",
+    "../cisei_lib/**/*.py": [
+        {
+            "path": "../cisei_lib/globals.py",
+            "date": "Sun Jul 16 17:21:23 2023",
+            "hash": "a04a35ac583c6413ba64db4aa9b94890"
+        },
+        {
+            "path": "../cisei_lib/__init__.py",
+            "date": "Tue Jul 11 14:00:34 2023",
+            "hash": "eaf663f006b35d2270fed7e75ac21b71"
+        },
+        {
+            "path": "../cisei_lib/aida/Rwrapper.py",
+            "date": "Tue Jul 11 13:09:42 2023",
+            "hash": "cb1cc3a483334a8a7f108ae2dc7bedf2"
+        },
+        {
+            "path": "../cisei_lib/aida/Rwrapper_AIDA.py",
+            "date": "Tue Jul 11 13:09:42 2023",
+            "hash": "929ff6ffca12b74cb63fe4c86bd185c9"
+        },
+        {
+            "path": "../cisei_lib/cli/__init__.py",
+            "date": "Tue Jul 11 13:09:42 2023",
+            "hash": "d41d8cd98f00b204e9800998ecf8427e"
+        },
+        {
+            "path": "../cisei_lib/cli/zabbix/ZabbixImporter.py",
+            "date": "Tue Jul 11 13:09:42 2023",
+            "hash": "b4ffef42b5408ae9755d3f285041e935"
+        },
+        {
+            "path": "../cisei_lib/cli/zabbix/__init__.py",
+            "date": "Tue Jul 11 13:09:42 2023",
+            "hash": "d41d8cd98f00b204e9800998ecf8427e"
+        },
+        {
+            "path": "../cisei_lib/cli/zabbix/Zabbix/zabbixGUI.py",
+            "date": "Tue Jul 11 13:09:42 2023",
+            "hash": "18b434fa568aeccf9c3ccf25106e4da5"
+        },
+        {
+            "path": "../cisei_lib/cli/zabbix/Zabbix/topoLib.py",
+            "date": "Tue Jul 11 13:09:42 2023",
+            "hash": "06a3924522a8fc064bd17c611ca4e68e"
+        },
+        {
+            "path": "../cisei_lib/cli/zabbix/Zabbix/plotLib.py",
+            "date": "Tue Jul 11 13:09:42 2023",
+            "hash": "2fbc37f3aed68990992c4da67b8e8e0e"
+        },
+        {
+            "path": "../cisei_lib/cli/zabbix/Zabbix/zabbixLib.py",
+            "date": "Tue Jul 11 13:09:42 2023",
+            "hash": "e9f1cf2355ed3b0d411f6ec675c69c5d"
+        },
+        {
+            "path": "../cisei_lib/cli/planner/CreateTables.py",
+            "date": "Tue Jul 11 13:09:44 2023",
+            "hash": "276469e529a7ab965f22c851bab9e7d5"
+        },
+        {
+            "path": "../cisei_lib/cli/planner/DBWrapper.py",
+            "date": "Tue Jul 11 16:02:06 2023",
+            "hash": "f6341bbc1f42dbc88f19e52ee31c8266"
+        },
+        {
+            "path": "../cisei_lib/cli/planner/WSwrapper.py",
+            "date": "Tue Jul 11 13:09:44 2023",
+            "hash": "2272d44805e3eb43e60fce0abfed6499"
+        },
+        {
+            "path": "../cisei_lib/cli/planner/ImportProject.py",
+            "date": "Tue Jul 11 13:09:44 2023",
+            "hash": "0447fb37ea0c88becc366a426ac33bcb"
+        },
+        {
+            "path": "../cisei_lib/cli/planner/PlanLib.py",
+            "date": "Sun Jul 16 17:21:58 2023",
+            "hash": "360fdec9a87de5545a74952379facaaf"
+        },
+        {
+            "path": "../cisei_lib/cli/planner/__init__.py",
+            "date": "Tue Jul 11 13:09:44 2023",
+            "hash": "d41d8cd98f00b204e9800998ecf8427e"
+        },
+        {
+            "path": "../cisei_lib/cli/planner/CSVExporter.py",
+            "date": "Tue Jul 11 13:09:44 2023",
+            "hash": "8a51698f5e2d139742b22d952a54de23"
+        },
+        {
+            "path": "../cisei_lib/cli/planner/DataImporter.py",
+            "date": "Tue Jul 11 13:09:44 2023",
+            "hash": "a6968e67dd0538ef761044b24029c2a2"
+        },
+        {
+            "path": "../cisei_lib/cli/planner/CSVImporter.py",
+            "date": "Tue Jul 11 13:09:44 2023",
+            "hash": "bdc624835756717a9debf22bf97d32bf"
+        },
+        {
+            "path": "../cisei_lib/gui/__init__.py",
+            "date": "Tue Jul 11 13:09:44 2023",
+            "hash": "d41d8cd98f00b204e9800998ecf8427e"
+        },
+        {
+            "path": "../cisei_lib/gui/tools/static_server.py",
+            "date": "Tue Jul 11 13:09:42 2023",
+            "hash": "65466ac37c30eb3ac89c59cacaf57317"
+        },
+        {
+            "path": "../cisei_lib/gui/tools/dev_funcs.py",
+            "date": "Tue Jul 11 15:42:42 2023",
+            "hash": "f3f096337b66dd316d66fee018b79ee4"
+        },
+        {
+            "path": "../cisei_lib/gui/tools/live_map_writter.py",
+            "date": "Wed Jul 12 16:14:31 2023",
+            "hash": "b5d8cc564bd280e9a911420cb4c5fc74"
+        },
+        {
+            "path": "../cisei_lib/gui/tools/tailer.py",
+            "date": "Tue Jul 11 13:09:42 2023",
+            "hash": "1ea4fe6dd1c7af5e2015ce22ba100066"
+        },
+        {
+            "path": "../cisei_lib/gui/tools/ui_splash.py",
+            "date": "Tue Jul 11 13:09:42 2023",
+            "hash": "2d7003ce63318be8bdf6537bfa948a2b"
+        },
+        {
+            "path": "../cisei_lib/gui/tools/Map.py",
+            "date": "Thu Jul 13 14:06:36 2023",
+            "hash": "01d5c088d11c8d47644513b1948b7584"
+        },
+        {
+            "path": "../cisei_lib/gui/tools/live_map.py",
+            "date": "Wed Jul 12 16:02:08 2023",
+            "hash": "6807f1e36d9e435ea481b271be328335"
+        },
+        {
+            "path": "../cisei_lib/gui/tools/qol.py",
+            "date": "Wed Jul 12 17:40:47 2023",
+            "hash": "f5700dca36a326dc9436016df6a685c2"
+        },
+        {
+            "path": "../cisei_lib/gui/tools/__init__.py",
+            "date": "Tue Jul 11 13:09:44 2023",
+            "hash": "d41d8cd98f00b204e9800998ecf8427e"
+        },
+        {
+            "path": "../cisei_lib/gui/tools/MapAux.py",
+            "date": "Thu Jul 13 13:00:12 2023",
+            "hash": "698902c7ddba4307d1587238dea4d751"
+        },
+        {
+            "path": "../cisei_lib/gui/widgets_old/old_suggestion_entry.py",
+            "date": "Tue Jul 11 13:09:44 2023",
+            "hash": "b14b10a87cf0366531f14828ff229447"
+        },
+        {
+            "path": "../cisei_lib/gui/widgets_old/WLog.py",
+            "date": "Tue Jul 11 13:09:44 2023",
+            "hash": "a11d20b0183f9dace5f698414cb8f597"
+        },
+        {
+            "path": "../cisei_lib/gui/widgets_old/MultiAutoCompleteEntry.py",
+            "date": "Tue Jul 11 13:09:44 2023",
+            "hash": "796c42082487b476dde9d173506304ff"
+        },
+        {
+            "path": "../cisei_lib/gui/widgets_old/__init__.py",
+            "date": "Tue Jul 11 13:09:44 2023",
+            "hash": "d41d8cd98f00b204e9800998ecf8427e"
+        },
+        {
+            "path": "../cisei_lib/gui/widgets_old/AutoCompleteEntry.py",
+            "date": "Tue Jul 11 13:09:44 2023",
+            "hash": "f596596f4643aca7ac085e78603b7242"
+        },
+        {
+            "path": "../cisei_lib/gui/widgets/wg_logbox.py",
+            "date": "Tue Jul 11 13:09:44 2023",
+            "hash": "9b57a136d7ef3f97a2c149960d43c903"
+        },
+        {
+            "path": "../cisei_lib/gui/widgets/wg_footer.py",
+            "date": "Tue Jul 11 13:09:44 2023",
+            "hash": "4e9d0873a4f6033f63fb72fc8ab70d63"
+        },
+        {
+            "path": "../cisei_lib/gui/widgets/wd_project.py",
+            "date": "Thu Jul 13 12:50:02 2023",
+            "hash": "7a3a2a3c0c36e22e4b70487094303c0f"
+        },
+        {
+            "path": "../cisei_lib/gui/widgets/wg_stringvar_from.py",
+            "date": "Tue Jul 11 15:35:12 2023",
+            "hash": "3f28331d24c17654abcc7153ced961cb"
+        },
+        {
+            "path": "../cisei_lib/gui/widgets/wd_import.py",
+            "date": "Tue Jul 11 16:05:42 2023",
+            "hash": "1a424c0b8a40643ecc1a2b7a55e2ea5b"
+        },
+        {
+            "path": "../cisei_lib/gui/widgets/wg_import_list.py",
+            "date": "Tue Jul 11 15:34:44 2023",
+            "hash": "3a1830024f880a9f414f601ee15123ef"
+        },
+        {
+            "path": "../cisei_lib/gui/widgets/wd_new_proj.py",
+            "date": "Tue Jul 11 14:04:08 2023",
+            "hash": "9bd1077cfb98753cdd2dc9f7642cb09f"
+        },
+        {
+            "path": "../cisei_lib/gui/widgets/wg_tabs.py",
+            "date": "Tue Jul 11 13:09:44 2023",
+            "hash": "0cbae6551b11c08da7c32fa591bc634a"
+        },
+        {
+            "path": "../cisei_lib/gui/widgets/wg_progressbar.py",
+            "date": "Tue Jul 11 15:35:06 2023",
+            "hash": "37aa380885f5724af56cad9411e513e5"
+        },
+        {
+            "path": "../cisei_lib/gui/widgets/wg_button_bar.py",
+            "date": "Tue Jul 11 15:34:28 2023",
+            "hash": "ec9740d6c571c082edb7fbd9f016fb6f"
+        },
+        {
+            "path": "../cisei_lib/gui/widgets/wd_about.py",
+            "date": "Tue Jul 11 14:01:12 2023",
+            "hash": "11da9aa2e13a851430f3545f44a83bd4"
+        },
+        {
+            "path": "../cisei_lib/gui/widgets/__init__.py",
+            "date": "Tue Jul 11 13:09:44 2023",
+            "hash": "d41d8cd98f00b204e9800998ecf8427e"
+        },
+        {
+            "path": "../cisei_lib/gui/widgets/wg_treeview.py",
+            "date": "Tue Jul 11 15:35:28 2023",
+            "hash": "8984cb7fbfcb9e28c7f81d1640ededeb"
+        },
+        {
+            "path": "../cisei_lib/gui/widgets/wd_pinpoint_tag.py",
+            "date": "Tue Jul 11 14:05:02 2023",
+            "hash": "a4e3518fb75e7db8103d849808c4341b"
+        },
+        {
+            "path": "../cisei_lib/gui/widgets/wg_tkvar_table.py",
+            "date": "Tue Jul 11 13:09:44 2023",
+            "hash": "7076069e60d3a17d4b34ae91f1d9bc03"
+        },
+        {
+            "path": "../cisei_lib/gui/widgets/wg_suggest_entry.py",
+            "date": "Tue Jul 11 13:09:44 2023",
+            "hash": "b9cb56bf7710adaa11abadd7bec75060"
+        },
+        {
+            "path": "../cisei_lib/gui/widgets/wd_start.py",
+            "date": "Tue Jul 11 14:11:32 2023",
+            "hash": "56f431e50a8d46034546ea2f3f3c718d"
+        },
+        {
+            "path": "../cisei_lib/gui/widgets/wg_simple_table.py",
+            "date": "Tue Jul 11 13:09:44 2023",
+            "hash": "de5f17ffb1f9b1bbf0974539d3115a30"
+        }
+    ],
+    "../Wolfram/**/*.wl*": [
+        {
+            "path": "../Wolfram/PhyLib.wl",
+            "date": "Tue Jul 11 13:09:44 2023",
+            "hash": "4ff32fed46555921e0a87f43b6d756da"
+        },
+        {
+            "path": "../Wolfram/PlanLib.wl",
+            "date": "Tue Jul 11 13:09:44 2023",
+            "hash": "33ae2692b5d61c30c3d9d730483e612c"
+        },
+        {
+            "path": "../Wolfram/WiPhyLib.wl",
+            "date": "Tue Jul 11 13:09:44 2023",
+            "hash": "cef1d8b1d203c19a4a1b10395ee75228"
+        },
+        {
+            "path": "../Wolfram/ElevLib.wl",
+            "date": "Tue Jul 11 13:09:44 2023",
+            "hash": "ef5e27fea0e6649d3b2b0e4b7afaf326"
+        },
+        {
+            "path": "../Wolfram/CSVLib.wl",
+            "date": "Tue Jul 11 13:09:44 2023",
+            "hash": "a6394bbf2d5f3901fc8ef1c5712293c0"
+        },
+        {
+            "path": "../Wolfram/wolfram_debug.wlnb",
+            "date": "Tue Jul 11 13:09:42 2023",
+            "hash": "4e510eb09bac8eff37f706f85c53c764"
+        },
+        {
+            "path": "../Wolfram/SavePlan.wl",
+            "date": "Tue Jul 11 13:09:44 2023",
+            "hash": "145f9e1a64b4ea80614da00bfbef949e"
+        },
+        {
+            "path": "../Wolfram/AMILib.wl",
+            "date": "Fri Jul 14 08:44:07 2023",
+            "hash": "36bf97ddf13e6c1e55fed26f2f1d2049"
+        },
+        {
+            "path": "../Wolfram/cliInterface.wls",
+            "date": "Tue Jul 11 13:09:44 2023",
+            "hash": "505ce4bb3694e049eea5b6c77fd0ad39"
+        },
+        {
+            "path": "../Wolfram/RepLib.wl",
+            "date": "Tue Jul 11 13:09:44 2023",
+            "hash": "ab9bb8f1fd219fd12f52f0e1098c02ea"
+        }
+    ],
+    "../public/**/*.*": [
+        {
+            "path": "../public/markergroup.js",
+            "date": "Tue Jul 11 13:09:44 2023",
+            "hash": "147e05f054d658b86cd1db3273367158"
+        },
+        {
+            "path": "../public/index.html",
+            "date": "Tue Jul 11 13:09:44 2023",
+            "hash": "26d050f7133343b91a9b435f8d257c02"
+        },
+        {
+            "path": "../public/resources/README.md",
+            "date": "Tue Jul 11 13:09:42 2023",
+            "hash": "f17151f7af3a2683d6d5003729616295"
+        },
+        {
+            "path": "../public/resources/icons/org.xfce.panel.launcher.png",
+            "date": "Tue Jul 11 13:09:46 2023",
+            "hash": "9e97da284d001f90331e40632e0d7a97"
+        },
+        {
+            "path": "../public/resources/icons/document-save-as.png",
+            "date": "Tue Jul 11 13:09:46 2023",
+            "hash": "cb2a8ae77e691dcc3790a968fc25e3b9"
+        },
+        {
+            "path": "../public/resources/icons/preferences-desktop-locale.png",
+            "date": "Tue Jul 11 13:09:46 2023",
+            "hash": "e39238d3e7b572453ac3b3905d0ba49c"
+        },
+        {
+            "path": "../public/resources/icons/list-add.png",
+            "date": "Tue Jul 11 13:09:46 2023",
+            "hash": "8ffbdcd7e9784154d52b6fcaec0413d0"
+        },
+        {
+            "path": "../public/resources/icons/document-import.png",
+            "date": "Tue Jul 11 13:09:46 2023",
+            "hash": "042482bc8804b40345c1dd546d3e009d"
+        },
+        {
+            "path": "../public/resources/icons/document-save.png",
+            "date": "Tue Jul 11 13:09:46 2023",
+            "hash": "880399b38c3269b8e17e267ba76671e1"
+        },
+        {
+            "path": "../public/resources/icons/utilities-terminal.png",
+            "date": "Tue Jul 11 13:09:46 2023",
+            "hash": "65a235ee98fb523efde8424f65130b5e"
+        },
+        {
+            "path": "../public/resources/icons/edit-delete.png",
+            "date": "Tue Jul 11 13:09:46 2023",
+            "hash": "5c51036fbf264702782999d871ec0a2c"
+        },
+        {
+            "path": "../public/resources/icons/document-export.png",
+            "date": "Tue Jul 11 13:09:46 2023",
+            "hash": "51808a585360c204a2d6695f0008fe5c"
+        },
+        {
+            "path": "../public/resources/icons/document-print.png",
+            "date": "Tue Jul 11 13:09:46 2023",
+            "hash": "33227440e1718789bbc75b0b3033db9a"
+        },
+        {
+            "path": "../public/resources/icons/dialog-error.png",
+            "date": "Tue Jul 11 13:09:46 2023",
+            "hash": "23fde8843d1cc566a699fd9d547d937b"
+        },
+        {
+            "path": "../public/resources/icons/dialog-warning.png",
+            "date": "Tue Jul 11 13:09:46 2023",
+            "hash": "18c9a0a7293903043404b18767d44827"
+        },
+        {
+            "path": "../public/resources/icons/document-new.png",
+            "date": "Tue Jul 11 13:09:46 2023",
+            "hash": "76c2ad70b64eb86264cb7acc5872922a"
+        },
+        {
+            "path": "../public/resources/icons/splash.png",
+            "date": "Tue Jul 11 13:09:44 2023",
+            "hash": "85a328e47db5b2f1ed08c2e6b2412554"
+        },
+        {
+            "path": "../public/resources/icons/view-refresh.png",
+            "date": "Tue Jul 11 13:09:46 2023",
+            "hash": "f6f833915a10eb2c87a9b9cee010e5d3"
+        },
+        {
+            "path": "../public/resources/icons/process-completed.png",
+            "date": "Tue Jul 11 13:09:46 2023",
+            "hash": "5c1e097b8879d52bc67e75a58e0f27e4"
+        },
+        {
+            "path": "../public/resources/icons/edit-cut.png",
+            "date": "Tue Jul 11 13:09:46 2023",
+            "hash": "6d8971500011591c503437daf906f77a"
+        },
+        {
+            "path": "../public/resources/icons/document-print-preview.png",
+            "date": "Tue Jul 11 13:09:46 2023",
+            "hash": "77a9ee3f3e199429c20b049eec8480ca"
+        },
+        {
+            "path": "../public/resources/icons/list-remove.png",
+            "date": "Tue Jul 11 13:09:46 2023",
+            "hash": "c56227c2e748dfa2e1ce0f288f7dbda8"
+        },
+        {
+            "path": "../public/resources/icons/appicon.png",
+            "date": "Tue Jul 11 13:09:42 2023",
+            "hash": "383277cb013028281cbd8d778c2b3f1e"
+        },
+        {
+            "path": "../public/resources/icons/dialog-information.png",
+            "date": "Tue Jul 11 13:09:46 2023",
+            "hash": "b150c5d31612015fdc9ff7ee086c0c31"
+        },
+        {
+            "path": "../public/resources/icons/document-open.png",
+            "date": "Tue Jul 11 13:09:46 2023",
+            "hash": "093b733ca957e9a1fef84019821aac31"
+        },
+        {
+            "path": "../public/resources/icons/draw-freehand.png",
+            "date": "Tue Jul 11 13:09:46 2023",
+            "hash": "61d1a8723afeb55f21dff6ee1d183ae6"
+        },
+        {
+            "path": "../public/resources/icons/dialog-apply.png",
+            "date": "Tue Jul 11 13:09:46 2023",
+            "hash": "2ce0bb6669b0d0e54ba213d011eb4ecd"
+        },
+        {
+            "path": "../public/resources/mapres/marker.png",
+            "date": "Tue Jul 11 13:09:46 2023",
+            "hash": "d9d1b32258390896bc2ec659fc3b9937"
+        },
+        {
+            "path": "../public/resources/mapres/repeater-marker.png",
+            "date": "Tue Jul 11 13:09:46 2023",
+            "hash": "40342523f66f59d2382b9e96cd257f24"
+        },
+        {
+            "path": "../public/resources/mapres/fiber-marker.png",
+            "date": "Tue Jul 11 13:09:46 2023",
+            "hash": "bba4dd961abf51921250239939b5bf2f"
+        },
+        {
+            "path": "../public/resources/mapres/gateway-marker.png",
+            "date": "Tue Jul 11 13:09:46 2023",
+            "hash": "4d5ff0e248ddf1e3b907fece107d24ee"
+        },
+        {
+            "path": "../public/resources/mapres/pole-marker.png",
+            "date": "Tue Jul 11 13:09:46 2023",
+            "hash": "2b202f68b47e8db5bab2e1f4ab08a23b"
+        },
+        {
+            "path": "../public/resources/mapres/tower-marker.png",
+            "date": "Tue Jul 11 13:09:46 2023",
+            "hash": "5d8e3cf702c3411eefccce3e5f5913dd"
+        },
+        {
+            "path": "../public/resources/mapres/meter-marker.png",
+            "date": "Tue Jul 11 13:09:46 2023",
+            "hash": "2a4afc34b92794d5d854005ed1eaa6d2"
+        },
+        {
+            "path": "../public/resources/mapres/automation-marker.png",
+            "date": "Tue Jul 11 13:09:46 2023",
+            "hash": "06576a9c15700e22e333ec7315271fdd"
+        },
+        {
+            "path": "../public/resources/mapres/amicolor/ami_5.png",
+            "date": "Tue Jul 11 13:09:46 2023",
+            "hash": "41724c31738d8153eb0a21ae99aec5a8"
+        },
+        {
+            "path": "../public/resources/mapres/amicolor/ami_7.png",
+            "date": "Tue Jul 11 13:09:46 2023",
+            "hash": "d023a04e93790e96cd7f6338887a7ce5"
+        },
+        {
+            "path": "../public/resources/mapres/amicolor/ami_1.png",
+            "date": "Tue Jul 11 13:09:46 2023",
+            "hash": "88511f4b248d88b4f5d1dfacdc37af51"
+        },
+        {
+            "path": "../public/resources/mapres/amicolor/ami_2.png",
+            "date": "Tue Jul 11 13:09:46 2023",
+            "hash": "320c0771590a617a852125e8221f547d"
+        },
+        {
+            "path": "../public/resources/mapres/amicolor/ami_6.png",
+            "date": "Tue Jul 11 13:09:46 2023",
+            "hash": "b8ede69572071136ee9739054cdca935"
+        },
+        {
+            "path": "../public/resources/mapres/amicolor/ami_0.png",
+            "date": "Tue Jul 11 13:09:46 2023",
+            "hash": "c7109544605c949481ea40153389265e"
+        },
+        {
+            "path": "../public/resources/mapres/amicolor/ami_3.png",
+            "date": "Tue Jul 11 13:09:46 2023",
+            "hash": "cee921f609f2fcbf8c14ee4c21822bb7"
+        },
+        {
+            "path": "../public/resources/mapres/amicolor/ami_4.png",
+            "date": "Tue Jul 11 13:09:46 2023",
+            "hash": "d6a3b8746da87e93c26fbcf45c463212"
+        },
+        {
+            "path": "../public/leaflet_plugin_markercluster/MarkerCluster.css",
+            "date": "Tue Jul 11 13:09:44 2023",
+            "hash": "7bc4f5bc3ef97f61a122253681687894"
+        },
+        {
+            "path": "../public/leaflet_plugin_markercluster/leaflet.markercluster.js",
+            "date": "Tue Jul 11 13:09:46 2023",
+            "hash": "ee8d78836d0d718b2b6d39ef60e03181"
+        },
+        {
+            "path": "../public/leaflet_plugin_markercluster/leaflet.markercluster-src.js",
+            "date": "Tue Jul 11 13:09:44 2023",
+            "hash": "a78da15453ae9dac343783b05af99917"
+        },
+        {
+            "path": "../public/leaflet_plugin_markercluster/MarkerCluster.Default.css",
+            "date": "Tue Jul 11 13:09:44 2023",
+            "hash": "0ba3d71ad0980967a4d3c7dc2ad819ef"
+        },
+        {
+            "path": "../public/leaflet/leaflet.css",
+            "date": "Tue Jul 11 13:09:46 2023",
+            "hash": "b38a4dc72fe4e4b8bcdd75cbe7ee98bc"
+        },
+        {
+            "path": "../public/leaflet/leaflet-src.js",
+            "date": "Tue Jul 11 13:09:46 2023",
+            "hash": "3cf7b3b6e3783d3b8a33508d1a50354e"
+        },
+        {
+            "path": "../public/leaflet/leaflet.js.map",
+            "date": "Tue Jul 11 13:09:46 2023",
+            "hash": "88e0bcf709dbfcbb57b73be22f283240"
+        },
+        {
+            "path": "../public/leaflet/leaflet.js",
+            "date": "Tue Jul 11 13:09:46 2023",
+            "hash": "f8b1586d921c9b7d9171d7ed17e62e3d"
+        },
+        {
+            "path": "../public/leaflet/leaflet-src.esm.js.map",
+            "date": "Tue Jul 11 13:09:46 2023",
+            "hash": "15345c475dede92c755970f9bfb7c59c"
+        },
+        {
+            "path": "../public/leaflet/leaflet-src.js.map",
+            "date": "Tue Jul 11 13:09:46 2023",
+            "hash": "2c25082cc04ffc7ea089a0431a7ec59a"
+        },
+        {
+            "path": "../public/leaflet/leaflet-src.esm.js",
+            "date": "Tue Jul 11 13:09:46 2023",
+            "hash": "152cb35182f7d4e6008cc82a51a23040"
+        },
+        {
+            "path": "../public/leaflet/images/layers-2x.png",
+            "date": "Tue Jul 11 13:09:46 2023",
+            "hash": "4f0283c6ce28e888000e978e537a6a56"
+        },
+        {
+            "path": "../public/leaflet/images/marker-icon.png",
+            "date": "Tue Jul 11 13:09:46 2023",
+            "hash": "2273e3d8ad9264b7daa5bdbf8e6b47f8"
+        },
+        {
+            "path": "../public/leaflet/images/layers.png",
+            "date": "Tue Jul 11 13:09:46 2023",
+            "hash": "a6137456ed160d7606981aa57c559898"
+        },
+        {
+            "path": "../public/leaflet/images/marker-icon-2x.png",
+            "date": "Tue Jul 11 13:09:46 2023",
+            "hash": "401d815dc206b8dc1b17cd0e37695975"
+        },
+        {
+            "path": "../public/leaflet/images/marker-shadow.png",
+            "date": "Tue Jul 11 13:09:46 2023",
+            "hash": "44a526eed258222515aa21eaffd14a96"
+        },
+        {
+            "path": "../public/mapres/marker.png",
+            "date": "Tue Jul 11 13:09:46 2023",
+            "hash": "d9d1b32258390896bc2ec659fc3b9937"
+        },
+        {
+            "path": "../public/mapres/repeater-marker.png",
+            "date": "Tue Jul 11 13:09:46 2023",
+            "hash": "40342523f66f59d2382b9e96cd257f24"
+        },
+        {
+            "path": "../public/mapres/fiber-marker.png",
+            "date": "Tue Jul 11 13:09:46 2023",
+            "hash": "bba4dd961abf51921250239939b5bf2f"
+        },
+        {
+            "path": "../public/mapres/gateway-marker.png",
+            "date": "Tue Jul 11 13:09:46 2023",
+            "hash": "4d5ff0e248ddf1e3b907fece107d24ee"
+        },
+        {
+            "path": "../public/mapres/pole-marker.png",
+            "date": "Tue Jul 11 13:09:46 2023",
+            "hash": "2b202f68b47e8db5bab2e1f4ab08a23b"
+        },
+        {
+            "path": "../public/mapres/tower-marker.png",
+            "date": "Tue Jul 11 13:09:46 2023",
+            "hash": "5d8e3cf702c3411eefccce3e5f5913dd"
+        },
+        {
+            "path": "../public/mapres/meter-marker.png",
+            "date": "Tue Jul 11 13:09:46 2023",
+            "hash": "2a4afc34b92794d5d854005ed1eaa6d2"
+        },
+        {
+            "path": "../public/mapres/automation-marker.png",
+            "date": "Tue Jul 11 13:09:46 2023",
+            "hash": "06576a9c15700e22e333ec7315271fdd"
+        },
+        {
+            "path": "../public/mapres/amicolor/ami_5.png",
+            "date": "Tue Jul 11 13:09:46 2023",
+            "hash": "41724c31738d8153eb0a21ae99aec5a8"
+        },
+        {
+            "path": "../public/mapres/amicolor/ami_7.png",
+            "date": "Tue Jul 11 13:09:46 2023",
+            "hash": "d023a04e93790e96cd7f6338887a7ce5"
+        },
+        {
+            "path": "../public/mapres/amicolor/ami_1.png",
+            "date": "Tue Jul 11 13:09:46 2023",
+            "hash": "88511f4b248d88b4f5d1dfacdc37af51"
+        },
+        {
+            "path": "../public/mapres/amicolor/ami_2.png",
+            "date": "Tue Jul 11 13:09:46 2023",
+            "hash": "320c0771590a617a852125e8221f547d"
+        },
+        {
+            "path": "../public/mapres/amicolor/ami_6.png",
+            "date": "Tue Jul 11 13:09:46 2023",
+            "hash": "b8ede69572071136ee9739054cdca935"
+        },
+        {
+            "path": "../public/mapres/amicolor/ami_0.png",
+            "date": "Tue Jul 11 13:09:46 2023",
+            "hash": "c7109544605c949481ea40153389265e"
+        },
+        {
+            "path": "../public/mapres/amicolor/ami_3.png",
+            "date": "Tue Jul 11 13:09:46 2023",
+            "hash": "cee921f609f2fcbf8c14ee4c21822bb7"
+        },
+        {
+            "path": "../public/mapres/amicolor/ami_4.png",
+            "date": "Tue Jul 11 13:09:46 2023",
+            "hash": "d6a3b8746da87e93c26fbcf45c463212"
+        },
+        {
+            "path": "../public/leaflet_plugin_draw/leaflet.draw.css",
+            "date": "Tue Jul 11 13:09:46 2023",
+            "hash": "fe7b4bfe23eb931466998cec626166f5"
+        },
+        {
+            "path": "../public/leaflet_plugin_draw/leaflet.draw.js",
+            "date": "Tue Jul 11 13:09:46 2023",
+            "hash": "289ad1d147f4bf1bb4c8804f0f54e197"
+        },
+        {
+            "path": "../public/leaflet_plugin_draw/images/layers-2x.png",
+            "date": "Tue Jul 11 13:09:46 2023",
+            "hash": "4f0283c6ce28e888000e978e537a6a56"
+        },
+        {
+            "path": "../public/leaflet_plugin_draw/images/spritesheet.png",
+            "date": "Tue Jul 11 13:09:46 2023",
+            "hash": "deac1d4aa2ccf7ed832e4db55bb64e63"
+        },
+        {
+            "path": "../public/leaflet_plugin_draw/images/marker-icon.png",
+            "date": "Tue Jul 11 13:09:46 2023",
+            "hash": "2273e3d8ad9264b7daa5bdbf8e6b47f8"
+        },
+        {
+            "path": "../public/leaflet_plugin_draw/images/spritesheet.svg",
+            "date": "Tue Jul 11 13:09:46 2023",
+            "hash": "fd5728f2cf777b06b966d05c0c823dc9"
+        },
+        {
+            "path": "../public/leaflet_plugin_draw/images/layers.png",
+            "date": "Tue Jul 11 13:09:46 2023",
+            "hash": "a6137456ed160d7606981aa57c559898"
+        },
+        {
+            "path": "../public/leaflet_plugin_draw/images/spritesheet-2x.png",
+            "date": "Tue Jul 11 13:09:46 2023",
+            "hash": "6a1e950d14904d4b6fb5c9bdc3dfad06"
+        },
+        {
+            "path": "../public/leaflet_plugin_draw/images/marker-icon-2x.png",
+            "date": "Tue Jul 11 13:09:46 2023",
+            "hash": "d95d69fa8a7dfe391399e22c0c45e203"
+        },
+        {
+            "path": "../public/leaflet_plugin_draw/images/marker-shadow.png",
+            "date": "Tue Jul 11 13:09:46 2023",
+            "hash": "44a526eed258222515aa21eaffd14a96"
+        }
+    ],
+    "../*.py": [
+        {
+            "path": "../main_gui.py",
+            "date": "Sun Jul 16 08:44:12 2023",
+            "hash": "53a0733be212f3fc725ec9bd58eeeaca"
+        },
+        {
+            "path": "../main_cli.py",
+            "date": "Sun Jul 16 17:19:47 2023",
+            "hash": "41f7e4cfe91c9fdeccb1544be42cc812"
+        },
+        {
+            "path": "../installModules.py",
+            "date": "Fri Jul 14 12:01:47 2023",
+            "hash": "e870aa4bd8783d2504c0abc97c266f2d"
+        }
+    ]
+}

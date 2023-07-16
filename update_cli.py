@@ -5,8 +5,9 @@ import json
 from datetime import datetime
 import time
 from zipfile import ZipFile
+from zipfile import ZIP_DEFLATED
 import requests
-from os import getcwd
+import webbrowser
 
 
 class UpdateAPP:
@@ -22,12 +23,13 @@ class UpdateAPP:
             '../*.py' 
         ]    
 
-        self.base = [
+        self.data = [
             '../Configuration/*.*',
             '../Data/**/*.*'
         ]  
 
         self.history = 'package_history.json'
+        self.local_files = 'my_files.json'
 
     def __str__(self):
         return 'Update Smart Grid Planner'
@@ -38,10 +40,16 @@ class UpdateAPP:
     def __exit__(self, t, v, tr):
         print('Update APP has exit!')
 
+    # Download from google drive
+    def repo_data(self, url, file ):
+        print(f'Please, after download, copy {file} to {os.getcwd()} and run update_cli.py again')
+        webbrowser.open(url)
+     
     # Download a file from github repository
     def repo_file(self, file):
         # url = f"https://github.com/ejamhour/copel_app/blob/main/{file}?raw=True"
         url = f"https://raw.githubusercontent.com/ejamhour/copel_app/main/{file}"
+        
         r = requests.get(url)
         if r.content == b'404: Not Found':
             print(r)
@@ -78,13 +86,36 @@ class UpdateAPP:
         for d in self.dlist: res[d] = self.scan_dir(d) 
         res = json.dumps(res, indent = 4)
         if save:
-            with open('my_files.json' ,'w') as f:
+            with open(self.local_files ,'w') as f:
                 f.write(res)
         return res
     
+    # Updates package history
+    def package_history(self, pinfo, download=False):
+        try:
+            if download:
+                ph = self.repo_file(self.history)
+                ph = json.loads(ph) 
+            else:                            
+                with open(self.history, 'r') as f:
+                    ph = json.load(f)
+        except:
+            ph = {}    
+
+        key = pinfo.split('.')[0].split('_')[1]
+        file = pinfo.split('.')[0] + '.zip'
+
+        with open(pinfo,'r') as f:
+            pkg = json.load(f)
+
+        ph[key] = { 'file' : file  , 'date' : pkg['date'] }
+
+        with open(self.history, 'w') as f:
+           f.write( json.dumps(ph, indent=4) )
+    
     # Creates a package with files modified since (last) update
     # -- update=None: include all files, base=True include Data e Configuration.
-    def create_package(self, file='package.zip', update='my_files.json', base=False):
+    def create_package(self, file='package.zip', update=None):
         if update is not None and os.path.isfile(update):
             with open(update) as f:
                 lu = json.load(f)
@@ -97,26 +128,46 @@ class UpdateAPP:
             new = [f for f in self.scan_dir(d) if f['hash'] not in old ] 
             if len(new) > 0: res[d] = new 
         
+        if res == {}:
+            print('nothing to update')
+            return
+
         with ZipFile(file, 'w') as zip:
             for dir,files in res.items():
                for f in files:
                    zip.write(f['path'])
-            if base:
-                for d in self.base:
-                    for f in self.scan_dir(d):
-                        zip.write(f['path'])
 
             res['date'] =  time.ctime()
             zip.writestr('updates/package.json', json.dumps(res, indent=4))
 
-        # TODO: criar um json com o nome do package
-        with open(os.path.splitext(file)[0] + '.json', 'w') as f:
+        info = os.path.splitext(file)[0] + '.json'
+        with open( info, 'w') as f:
+            f.write( self.create_json())
+        self.package_history(info)
+
+    # Creates data package
+    def create_datapackage(self, file='package_data.zip'):
+        
+        res = {}
+        with ZipFile(file, 'w', compression=ZIP_DEFLATED, compresslevel=9) as zip:
+            for d in self.data:
+                res[d] = self.scan_dir(d)
+                for f in res[d]:
+                    zip.write(f['path'])
+
+            res['date'] =  time.ctime()
+            zip.writestr('updates/package.json', json.dumps(res, indent=4))
+
+        info = os.path.splitext(file)[0] + '.json'
+        with open( info, 'w') as f:
             f.write( json.dumps(res, indent=4) )
+        
+        self.package_history(info)
 
     # Apply package to the current directory if not outdated
     def apply_package(self, package):
 
-        with open('my_files.json', 'r') as f:
+        with open(self.local_files, 'r') as f:
             linfo = json.load(f)
 
         with ZipFile(package, 'r') as zip:
@@ -135,7 +186,7 @@ class UpdateAPP:
     # Check updates, download and apply packages if necessary
     def check_update(self):
 
-        with open('my_files.json', 'r') as f:
+        with open(self.local_files, 'r') as f:
             linfo = json.load(f)
         
         t = lambda d : datetime.strptime(d, "%a %b %d %H:%M:%S %Y")
@@ -157,11 +208,13 @@ class UpdateAPP:
       
 
 if __name__ == '__main__':
-
-      
+         
     with UpdateAPP() as uapp:
-        # uapp.create_json(save=True)
-        uapp.create_package(file='package_v1.zip', update='my_files.json', base=False)
+        # uapp.create_package(file='package_base.zip', update=None)
+        # uapp.create_package(file='package_v1.zip', update='package_base.json')
+        # uapp.create_package(file='package_v2.zip', update='package_v1.json')
+        # uapp.create_package(file='package_full.zip', update='package_base.json')
+        uapp.create_datapackage(file='package_data.zip')
         # uapp.apply_package('package.zip')
         # uapp.check_update()
 

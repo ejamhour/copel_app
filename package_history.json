@@ -1,0 +1,23 @@
+{
+    "base": {
+        "file": "package_base.zip",
+        "date": "Sun Jul 16 17:18:01 2023"
+    },
+    "v1": {
+        "file": "package_v1.zip",
+        "date": "Sun Jul 16 17:20:01 2023"
+    },
+    "v2": {
+        "file": "package_v2.zip",
+        "date": "Sun Jul 16 17:22:03 2023"
+    },
+    "full": {
+        "file": "package_full.zip",
+        "date": "Sun Jul 16 17:22:19 2023"
+    },
+    "data": {
+        "file": "package_data.zip",
+        "date": "Sun Jul 16 17:23:33 2023",
+        "url" : "https://drive.google.com/uc?export=download&id=15WoRXdSOmMF8hzb1cr8wW_P0LcDWuZQ4"
+    }
+}
