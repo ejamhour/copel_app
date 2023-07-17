@@ -1,5 +1,5 @@
 {
-    "date": "Sun Jul 16 17:22:19 2023",
+    "date": "Mon Jul 17 16:24:22 2023",
     "../cisei_lib/**/*.py": [
         {
             "path": "../cisei_lib/globals.py",
@@ -759,8 +759,8 @@
         },
         {
             "path": "../main_cli.py",
-            "date": "Sun Jul 16 17:19:47 2023",
-            "hash": "41f7e4cfe91c9fdeccb1544be42cc812"
+            "date": "Mon Jul 17 14:44:16 2023",
+            "hash": "0b8448211a34361fd23cbf5ee3578fcb"
         },
         {
             "path": "../installModules.py",

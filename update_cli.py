@@ -120,11 +120,13 @@ class UpdateAPP:
             with open(update) as f:
                 lu = json.load(f)
         else:
+            print('ERROR: create_package: update file not found')
             lu = {}
-
+  
+      
         res = {}
         for d in self.dlist:
-            old = [ u['hash'] for u in lu.get(d, [] ) ]
+            old = [ u['hash'] for u in lu.get(d, [] ) ]            
             new = [f for f in self.scan_dir(d) if f['hash'] not in old ] 
             if len(new) > 0: res[d] = new 
         
@@ -141,6 +143,7 @@ class UpdateAPP:
             zip.writestr('updates/package.json', json.dumps(res, indent=4))
 
         info = os.path.splitext(file)[0] + '.json'
+        print(info)
         with open( info, 'w') as f:
             f.write( self.create_json())
         self.package_history(info)
@@ -165,58 +168,115 @@ class UpdateAPP:
         self.package_history(info)
 
     # Apply package to the current directory if not outdated
-    def apply_package(self, package):
+    def apply_package(self, package, remove=True):
 
-        with open(self.local_files, 'r') as f:
-            linfo = json.load(f)
+        if os.path.isfile(self.local_files):
+            with open(self.local_files, 'r') as f:
+                linfo = json.load(f)
+        else:
+            linfo = None
 
+        if package == 'package_data.zip':
+            linfo = None
+        
         with ZipFile(package, 'r') as zip:
             pinfo = json.loads( zip.read('updates/package.json').decode() ) 
 
             t = lambda d : datetime.strptime(d, "%a %b %d %H:%M:%S %Y")
 
-            if t(pinfo['date']) > t(linfo['date']):
-                print('Your app you be updated!')
+            if linfo is None or t(pinfo['date']) > t(linfo['date']):
+                print('Your app will be updated!')
                 zip.extractall("../")
+                if remove:
+                    os.remove(package)           
             else:
                 print('This package is outdated!')
 
-            self.create_json(save=True, date=pinfo['date'])
+        if package != 'package_data.zip':
+            self.create_json(save=True, date=pinfo['date'])   
+
     
     # Check updates, download and apply packages if necessary
-    def check_update(self):
+    def check_update(self, ask=False):
 
-        with open(self.local_files, 'r') as f:
-            linfo = json.load(f)
+        if os.path.isfile(self.local_files):
+            with open(self.local_files, 'r') as f:
+                linfo = json.load(f)
+        else:
+            print("Base installation")
+            linfo = None
         
         t = lambda d : datetime.strptime(d, "%a %b %d %H:%M:%S %Y")
 
-        pkg = self.repo_file("package.json")
+        pkg = self.repo_file("package_history.json")
         pkg = json.loads(pkg.decode())
+        data = pkg.pop('data')
 
-        updates = [ k for k,v in pkg.items() if t(v["date"]) > t(linfo['date']) ]
+
+        if linfo is not None:
+            updates = [ k for k,v in pkg.items() if t(v["date"]) > t(linfo['date']) ]
+        else:
+            updates = list(pkg.keys())
 
         if len(updates) > 0:
-            print('There are updates available.')
+
+            if len([ u for u in updates if u[0] == 'v' ] ) > 1:
+                updates = [ u for u in updates if u[0] != 'v' ]    
+            else:
+                updates.remove('full')
+        
+            print(f'There are updates available.')
+
+            if ask:
+                print('Please, to update close the application and run update_cli.py from update folder')
+                input('<ENTER> to continue ')
+                exit()
+
             print('downloading packages ... ')
             try:
                 for u in updates:
-                    res = self.repo_file(f"package_{u}.zip")
+                    res = self.repo_file(f"package_{u}.zip")  
+                    with open(f"package_{u}.zip", 'wb') as f:
+                        f.write(res)
+                    res = self.repo_file(f"package_{u}.json")  
+                    with open(f"package_{u}.json", 'wb') as f:
+                        f.write(res)
             except Exception as e:
                 print(e)
                 return
-      
+            
+            print(f'installing packages: {updates}')
+            if 'base' in updates:
+                self.apply_package(f"package_base.zip")
+                updates.remove('base')
+
+            if 'full' in updates:
+                self.apply_package(f"package_full.zip")
+                updates.remove('full')
+        
+            if len(updates) > 0:
+                self.apply_package(f"package_{updates[0]}.zip")
+            
+        if not os.path.isdir('../Data'):
+            print('Data folder is missing')
+            if not os.path.isfile(data['file']):
+                print(f"Downloading ... {data['file']}")
+                self.repo_data(data['url'], data['file'])
+            else:
+                self.apply_package(data['file'])
+     
 
 if __name__ == '__main__':
          
     with UpdateAPP() as uapp:
+
         # uapp.create_package(file='package_base.zip', update=None)
-        # uapp.create_package(file='package_v1.zip', update='package_base.json')
+        uapp.create_package(file='package_v1.zip', update='package_base.json')
         # uapp.create_package(file='package_v2.zip', update='package_v1.json')
         # uapp.create_package(file='package_full.zip', update='package_base.json')
-        uapp.create_datapackage(file='package_data.zip')
+        # uapp.create_datapackage(file='package_data.zip')
         # uapp.apply_package('package.zip')
-        # uapp.check_update()
+        # uapp.check_update(ask=True)
 
         pass
 
