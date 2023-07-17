@@ -5,7 +5,7 @@
     },
     "full": {
         "file": "package_full.zip",
-        "date": "Mon Jul 17 16:24:22 2023"
+        "date": "Mon Jul 17 16:35:47 2023"
     },
     "data": {
         "file": "package_data.zip",
@@ -15,5 +15,9 @@
     "v1": {
         "file": "package_v1.zip",
         "date": "Mon Jul 17 16:26:31 2023"
+    },
+    "v2": {
+        "file": "package_v2.zip",
+        "date": "Mon Jul 17 16:35:47 2023"
     }
 }

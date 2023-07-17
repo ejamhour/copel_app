@@ -271,9 +271,9 @@ if __name__ == '__main__':
     with UpdateAPP() as uapp:
 
         # uapp.create_package(file='package_base.zip', update=None)
-        uapp.create_package(file='package_v1.zip', update='package_base.json')
-        # uapp.create_package(file='package_v2.zip', update='package_v1.json')
-        # uapp.create_package(file='package_full.zip', update='package_base.json')
+        #uapp.create_package(file='package_v1.zip', update='package_base.json')
+        uapp.create_package(file='package_v2.zip', update='package_v1.json')
+        uapp.create_package(file='package_full.zip', update='package_base.json')
         # uapp.create_datapackage(file='package_data.zip')
         # uapp.apply_package('package.zip')
         # uapp.check_update(ask=True)
