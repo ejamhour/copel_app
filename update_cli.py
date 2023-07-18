@@ -14,6 +14,7 @@ class UpdateAPP:
 
     def __init__(self, **args):
 
+        print('WARNING: update_cli changed current dir!')
         os.chdir( os.path.dirname(__file__))        
 
         self.dlist = [
@@ -230,7 +231,7 @@ class UpdateAPP:
             if ask:
                 print('Please, to update close the application and run update_cli.py from update folder')
                 input('<ENTER> to continue ')
-                exit()
+                return()
 
             print('downloading packages ... ')
             try:
@@ -264,19 +265,42 @@ class UpdateAPP:
                 self.repo_data(data['url'], data['file'])
             else:
                 self.apply_package(data['file'])
-     
+    
+    # Create a full package from base package, removing all intermediate versions
+    # -- this funcion update my_files.json to prevent updates in the master distribution
+    def create_fullpackage(self, del_older=True):
+        if not os.path.isfile('package_base.json'):
+            print("ERROR: There is no base package to update!")   
+            return        
+        self.create_package(file='package_full.zip', update='package_base.json') 
+        self.create_json(save=True)
+
+        self.package_history('package_full.json')
+
+        if del_older:
+            with open(self.history, 'r') as f:
+                ph = json.load(f)   
+                vs = [ k for k in ph.keys()  if k[0] == 'v' ]     
+                for v in vs:
+                    ph.pop(v)
+        
+                with open(self.history, 'w') as f:
+                    f.write(json.dumps(ph, indent=4))
+           
+
+
 
 if __name__ == '__main__':
          
     with UpdateAPP() as uapp:
 
         # uapp.create_package(file='package_base.zip', update=None)
-        #uapp.create_package(file='package_v1.zip', update='package_base.json')
-        uapp.create_package(file='package_v2.zip', update='package_v1.json')
-        uapp.create_package(file='package_full.zip', update='package_base.json')
         # uapp.create_datapackage(file='package_data.zip')
         # uapp.apply_package('package.zip')
         # uapp.check_update(ask=True)
+        # uapp.check_update()
+        # uapp.create_fullpackage()
+        uapp.check_update()
 
         pass
 
