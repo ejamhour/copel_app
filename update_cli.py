@@ -187,14 +187,15 @@ class UpdateAPP:
 
             if linfo is None or t(pinfo['date']) > t(linfo['date']):
                 print('Your app will be updated!')
-                zip.extractall("../")
-                if remove:
-                    os.remove(package)           
+                zip.extractall("../")         
             else:
                 print('This package is outdated!')
 
         if package != 'package_data.zip':
             self.create_json(save=True, date=pinfo['date'])   
+        
+        if remove:
+            os.remove(package) 
 
     
     # Check updates, download and apply packages if necessary
@@ -223,7 +224,7 @@ class UpdateAPP:
 
             if len([ u for u in updates if u[0] == 'v' ] ) > 1:
                 updates = [ u for u in updates if u[0] != 'v' ]    
-            else:
+            if len([ u for u in updates if u[0] == 'v' ] ) == 1:
                 updates.remove('full')
         
             print(f'There are updates available.')
